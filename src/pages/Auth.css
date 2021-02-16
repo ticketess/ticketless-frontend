@@ -1,0 +1,93 @@
+.bg-image-login {
+  background-image: url('../assets/img/login-banner.png');
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .bg-image-login {
+    background-size: cover;
+  }
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+
+.input {
+  transition: border 0.2s ease-in-out;
+  min-width: 280px
+}
+
+.input:focus+.label,
+.input:active+.label,
+.input.filled+.label {
+  font-size: .75rem;
+  transition: all 0.2s ease-out;
+  top: -0.5rem;
+  color: #667eea;
+}
+
+.label {
+  transition: all 0.2s ease-out;
+  top: 0.4rem;
+  left: 0;
+}
+
+.shadow-box {
+  box-shadow: 0 10px 50px -12px rgba(0, 0, 0, 0.25);;
+}
